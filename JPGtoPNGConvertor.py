@@ -10,7 +10,6 @@ files = os.listdir(source)
 
 
 def convertor(dest):
-    print("Directory is not available, so creating a new one!")
     for file in files:
         print(file)
         image = Image.open(f'./{source}/{file}')
@@ -20,6 +19,7 @@ def convertor(dest):
 
 
 if isdir is False:
+    print(f"Directory is not available, so creating the directory with the name {dest}!")
     os.mkdir(dest)
     convertor(dest)
 
