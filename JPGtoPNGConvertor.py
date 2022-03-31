@@ -10,7 +10,7 @@ files = os.listdir(source)
 
 
 def convertor(dest):
-    print("Directory is not available, so creating a new one")
+    print("Directory is not available, so creating a new one!")
     for file in files:
         print(file)
         image = Image.open(f'./{source}/{file}')
