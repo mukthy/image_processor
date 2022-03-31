@@ -1,0 +1,18 @@
+from PIL import Image, ImageFilter
+
+img = Image.open("./Pokemon/pikachu.jpg")
+filtered_img_blur = img.filter(ImageFilter.BLUR)
+filtered_img_smooth = img.filter(ImageFilter.SMOOTH)
+filtered_img_smooth.save("smooth.png", "png")
+#filtered_img_smooth.show()
+grey = img.convert("L")
+grey.save("grey.png", "png")
+resize = img.resize((300, 300))
+resize.save("resize.png", "png")
+crop_box = (100, 100, 400, 400)
+cropped_img = img.crop(crop_box)
+cropped_img.save("cropped.png", "png")
+acorn = Image.open("./acorn.jpg")
+acorn.thumbnail((400, 400))
+acorn.save("thumbnail.png", "png")
+print(acorn)
