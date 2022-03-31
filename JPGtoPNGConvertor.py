@@ -19,7 +19,7 @@ def convertor(dest):
 
 
 if isdir is False:
-    print(f"Directory is not available, so creating the directory with the name {dest}!")
+    print(f"Directory is not available, so creating the directory with the name '{dest}/'!")
     os.mkdir(dest)
     convertor(dest)
 
